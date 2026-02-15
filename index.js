@@ -26,3 +26,18 @@ likeBtns.forEach(function(btn) {
         } 
          
 )});
+let reply = document.getElementById("reply");
+let replyOne = document.getElementById("replyOne");
+reply.addEventListener("click",function(){
+    replyOne.classList.toggle("hidden")
+})
+let replyTwo = document.getElementById("replyTwo");
+let reply2 = document.getElementById("reply2");
+replyTwo.addEventListener("click",function(){
+    reply2.classList.toggle("hidden")
+})
+let replyThree = document.getElementById("replyThree");
+let reply3 = document.getElementById("reply3");
+reply3.addEventListener("click",function(){
+    replyThree.classList.toggle("hidden")
+})
