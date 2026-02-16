@@ -1,27 +1,11 @@
-const subscribe = document.getElementById("subscribe");
-let subscribeBlack = document.getElementById("subscribe-black");
-let subscribeRed = document.getElementById("subscribe-red");
-let closeSign = document.getElementById("closeSign")
-subscribeBlack.addEventListener("click",function(){
-    subscribe.classList.remove("hidden");
-})
-subscribeRed.addEventListener("click",function(){
-    subscribe.classList.add("hidden")
-})
- closeSign.addEventListener("click",function(){
-    subscribe.classList.add("hidden")
- })
-//  let likebtn = document.getElementById("likebtn");
-//  likebtn.addEventListener("click", function(){
-//     likebtn.textContent = "liked";
-//  })
+
 const likeBtns = document.querySelectorAll(".likebtn");
 
 likeBtns.forEach(function(btn) {
     btn.addEventListener("click", function()
      {
         
-         btn.textContent = "Liked" 
+         btn.textContent = "✔Liked" 
            
         } 
          
@@ -41,3 +25,31 @@ let reply3 = document.getElementById("reply3");
 reply3.addEventListener("click",function(){
     replyThree.classList.toggle("hidden")
 })
+
+
+  const subscribeDiv = document.getElementById("subscribeDiv");
+const subscribeRed = document.getElementById("subscribe-red"); // optional if closeSign exists
+const closeSign = document.getElementById("closeSign");
+const subscribe = document.getElementById("subscribe-redOne");
+const subscribeBlack = document.getElementById("subscribe-black");
+
+// Show modal when clicking either "subscribeBlack" or "subscribe"
+subscribeBlack.addEventListener("click", function(){
+    subscribeDiv.classList.remove("hidden");
+})
+
+subscribe.addEventListener("click", function(){
+    subscribeDiv.classList.remove("hidden");
+})
+
+// Hide modal when clicking close button
+closeSign.addEventListener("click", function(){
+    subscribeDiv.classList.add("hidden");
+})
+
+  subscribeRed.addEventListener("click", function(){
+    subscribeDiv.classList.add("hidden")
+
+  })
+
+  
